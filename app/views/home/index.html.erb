@@ -1,4 +1,4 @@
-<nav class="text-right">
+<nav class="text-right nav-css">
   <% if user_signed_in? %>
     <%= @user.name %>
     <%= link_to 'Log out', destroy_user_session_path, method: "delete" %>  
