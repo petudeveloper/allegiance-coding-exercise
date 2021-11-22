@@ -1,4 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
+  @user = User.find_by(admin: true)
+  default from: @user.email
   layout 'mailer'
 end
