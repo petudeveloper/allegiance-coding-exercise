@@ -9,8 +9,10 @@ class RequestsController < ApplicationController
   end
 
   def create
+    @user = current_user
     @request = current_user.requests.new(create_request_params)
     if @request.save
+      TechRequestMailer.with(user: @user, request: @request).request_sent.deliver_later
       redirect_to requests_path, notice: 'Post was successfully created.'
     else
       render :index, alert: 'Post was not created.'
@@ -18,6 +20,7 @@ class RequestsController < ApplicationController
   end
 
   private
+
   def create_request_params
     params.require(:request).permit(:subject, :body)
   end
