@@ -32,12 +32,6 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 
-# # Configuration for using chrome to run the system tests
-Capybara.register_driver :selenium_chrome do |app|
-  Capybara::Selenium::Driver.new(app, browser: :chrome)
-end
-Capybara.default_driver = :selenium_chrome
-
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
