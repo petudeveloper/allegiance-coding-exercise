@@ -12,15 +12,6 @@
   <% if @user.admin? %>
     <p><strong>Admin:</strong> <%= @user.admin? %></p>
   <% else %>
-    <div class="my-4 d-flex justify-content-center">
-      <form>
-        <div class="form-group">
-          <label for="request">Write your technical to system admin request here:</label><br>
-          <textarea  type="text" id="request" name="request" rows="10" cols="50"></textarea >
-        </div>
-        <div class="actions">
-          <button class="btn btn-primary">Send</button>
-        </div>
-    </div>
+    <%= link_to 'New technical request', new_request_path %> 
   <% end %>
 </div>
