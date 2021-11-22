@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+.nav-css {
+  position: absolute;
+  top: 0;
+}
