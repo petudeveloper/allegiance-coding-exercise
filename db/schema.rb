@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_11_22_055356) do
 
   create_table "requests", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "subjec"
+    t.string "subject"
     t.text "body"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
