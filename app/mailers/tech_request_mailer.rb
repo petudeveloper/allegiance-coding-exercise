@@ -8,6 +8,12 @@ class TechRequestMailer < ApplicationMailer
   def request_sent
     @greeting = "Hi"
 
-    mail to: "to@example.org"
+    # Needs to find the current users email
+    @user = User.find(2)
+
+    mail(
+      to: @user.email,
+      subject: "new request created"
+    )
   end
 end
