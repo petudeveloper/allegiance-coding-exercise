@@ -15,6 +15,10 @@ Models and Relationships
 
 ![screenshot](./docs/ModelRelationships.png)
 
+Tests Passing
+
+![screenshot](./docs/test_screenshot4.PNG)
+
 ## Built With
 
 - Ruby on Rails
